@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WaterClassifierDialogBase</class>
+ <widget class="QDialog" name="WaterClassifierDialogBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>572</width>
+    <height>364</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Water Classifier</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="0">
+    <widget class="QLabel" name="training2_label">
+     <property name="text">
+      <string>Select Path for non-class sample(*.shp)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
+    <widget class="QPushButton" name="output_button">
+     <property name="text">
+      <string>Browse</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="output_line"/>
+   </item>
+   <item row="3" column="2">
+    <widget class="QPushButton" name="training2_button">
+     <property name="text">
+      <string>Browse</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QPushButton" name="training1_button">
+     <property name="text">
+      <string>Browse</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="3">
+    <widget class="QDialogButtonBox" name="dialogButtonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="output_label">
+     <property name="text">
+      <string>Select Output Path(*.tif)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="training1_label">
+     <property name="text">
+      <string>Select Path for class sample(*.shp)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="layer_line"/>
+   </item>
+   <item row="0" column="2">
+    <widget class="QPushButton" name="layer_button">
+     <property name="text">
+      <string>Browse</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="layer_label">
+     <property name="text">
+      <string>Select a Layer Path(*.tif)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="training1_line"/>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="training2_line"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>dialogButtonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>WaterClassifierDialogBase</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>9</x>
+     <y>244</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dialogButtonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>WaterClassifierDialogBase</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>9</x>
+     <y>244</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
